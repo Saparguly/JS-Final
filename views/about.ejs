@@ -1,12 +1,37 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <link rel='stylesheet' href='/stylesheets/styles.css' />
 </head>
 <body>
-    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Facere veritatis voluptatum id consectetur fugiat. Assumenda, illo distinctio. Unde similique aut minus molestias! Minus aliquam est error. Repellendus nihil possimus sed.</p>
+    <div class="navbar">
+        <a class="nav-btn current" onclick="about()">About<div class="dropdown">You are here now</div></a>
+        <a class="nav-btn" onclick="achievements()">Achievements<div class="dropdown">Here You can read about my achievements</div></a>
+        <a class="nav-btn" onclick="contact()">Contact me<div class="dropdown">If You have any questions or just want to talk about education, use the form in this section</div></a>
+    </div>
+    <form action="/about" method="get">
+        <input type="submit" name="about" hidden>
+      </form>
+      <form action="/achievements" method="get">
+        <input type="submit" name="achievements" hidden>
+      </form>
+      <form action="/contact_me" method="get">
+        <input type="submit" name="contact" hidden>
+      </form>
+      <script>
+        function about() {
+          document.querySelector('[name="about"]').click()
+        }
+        function achievements() {
+          document.querySelector('[name="achievements"]').click()
+        }
+        function contact() {
+          document.querySelector('[name="contact"]').click()
+        }
+      </script>
+      <p>Hi! How are You doing? On this page, You can read a bit about me: skills, education, etc... <br> So, here the main content comes.</p>
+      <p>Let's start from the square one. I was born in Ashgabat in 2005, and had attended a kindergarten until the age of seven. After that, I have been accepted at the Specialized secondary school №16 with profound learning of foreign languages, and I still study there. In 2019, I have graduated from the Children's Arts School №1 with honours, having a piano and vocal as specialties. At the moment, I am the last year student, so I need to choose a university and apply for the enrollment. For not having problems with the lack of time, I began thinking about this question at the 8th grade. I chose studying in Japan as my goal. Since 2019, I have been learning Japanese language, and now I am preparing for the Upper-Intermediate degree exam. In 2021, I started attending English courses to improve my spoken and academic language, as they are necessary for studying abroad. So, currently, I have C1 language proficiency level (according to CEFR scale). In spring of 2022, my attention was taken by IT. Frontend Development, to be precise. After getting two red diplomas for the first courses, I am waiting for the decision of our high-qualified mentor about the next diploma *and I hope it will also be red:)* In addition, I regularly take part in different subject contests and olympiads, both local and international. If You are interested to see the results, You can visit <i>Achievements</i> section.</p> 
+      <p>If You want to ask any questions or just want to know more about me, You can fill in the form in <i>Contact me</i> section, and I will call or send You an email.</p>
 </body>
 </html>
