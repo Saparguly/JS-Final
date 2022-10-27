@@ -5,7 +5,42 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <link rel="stylesheet" href="/stylesheets/styles.css">
 </head>
-<body>
+<body id="body">
+    <div class="navbar">
+        <a class="nav-btn" onclick="about()">About<div class="dropdown">Here You can read a little about myself</div></a>
+        <a class="nav-btn" onclick="achievements()">Achievements<div class="dropdown">Here You can read about my achievements</div></a>
+        <a class="nav-btn current" onclick="contact()">Contact me<div class="dropdown">You are here now</div></a>
+    </div>
+    <form action="/about" method="get">
+        <input type="submit" name="about" hidden>
+      </form>
+      <form action="/achievements" method="get">
+        <input type="submit" name="achievements" hidden>
+      </form>
+      <form action="/contact_me" method="get">
+        <input type="submit" name="contact" hidden>
+      </form>
+      <script>
+        function about() {
+          document.querySelector('[name="about"]').click()
+        }
+        function achievements() {
+          document.querySelector('[name="achievements"]').click()
+        }
+        function contact() {
+          document.querySelector('[name="contact"]').click()
+        }
+      </script>
+    <div class="flex-col">
+            <form class="left" action="/contact_me" method="post">
+                <h1 id="black">Contact form:</h1>
+                <input class="left gap input" type="text" name="name" placeholder="Name" required><br>
+                <input class="left gap input" type="email" name="email" placeholder="E-mail address" required><br>
+                <input class="left gap input message" type="text" name="message" placeholder="Type Your message here..."><br>
+                <input class="right gap input btn" type="submit" value="submit">
+            </form>
+    </div>
 </body>
 </html>

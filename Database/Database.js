@@ -9,7 +9,8 @@ class Client {
 
 class Database {
     static addClient(name, email, message){
-        clients.push(new Clienty(name, email, message));
+        clients.push(new Client(name, email, message));
+        console.log(clients);
     }
 }
 module.exports = Database;

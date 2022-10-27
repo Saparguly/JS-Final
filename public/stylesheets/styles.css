@@ -1,9 +1,20 @@
 @import url(//fonts.googleapis.com/css?family=Lato:300:400);
+*{
+  font-family: 'Lato', sans-serif;
+  box-sizing: border-box;
+}
 
 body{
   margin: 0;
 }
 
+#body{
+  background-color: #fafafa;
+}
+
+#black{
+  color: #000;
+}
 
 .nav-btn{
   height: 10vh;
@@ -44,6 +55,7 @@ body{
   justify-content: center;
   align-items: center;
   height: 100vh;
+  gap: 20px;
 }
 
 .next-btn{
@@ -106,4 +118,30 @@ p{
   font-size: 24pt;
   font-weight: 400;
   overflow-wrap: normal;
+}
+
+.input{
+  width: 30vw;
+  padding: 15px;
+  border-radius: 15px;
+  border: none;
+  box-shadow: 4px 4px 10px #0000000f;
+  height: 30px;
+}
+
+.gap{
+  margin-bottom: 10px;
+}
+
+.message{
+  width: 30vw;
+  padding: 15px;
+  border-radius: 15px;
+  border: none;
+  box-shadow: 4px 4px 10px #0000000f;
+  height: 150px;
+} 
+
+.btn{
+  padding: 5px;
 }
